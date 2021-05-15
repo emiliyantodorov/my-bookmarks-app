@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  color: #444;
+  background: dodgerblue;
+}
+
+h2 {
+  background: #5f27cd;
+  padding: 0 30rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+}
+
+.section-added {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  text-shadow: 0 0.2rem #8b60e1;
+  font-size: 7rem;
+}
+
+.section-forms {
+  display: flex;
+  align-items: center;
+  background: rgba(30, 144, 255, 0.7);
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.folder {
+  flex: 0 0 20%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+@media screen and (max-width: 1090px) {
+  .folder {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (max-width: 881px) {
+  .folder {
+    flex: 0 0 33.333%;
+  }
+}
+.folder__remove-icon {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  width: 1rem;
+}
+.folder__remove-icon:hover {
+  background-color: red;
+  cursor: pointer;
+}
+.folder__title {
+  color: white;
+}
+.folder__img-and-bookmarks:hover ul {
+  display: block;
+}
+.folder__img {
+  width: 8rem;
+  cursor: pointer;
+}
+
+.form {
+  background-color: whitesmoke;
+  width: 35rem;
+  border-radius: 1rem;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.form--add-url {
+  margin-right: 3rem;
+}
+@media screen and (max-width: 793px) {
+  .form--add-url {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1.4rem;
+}
+
+.error-field {
+  visibility: hidden;
+  color: red;
+  font-size: 1.6rem;
+  padding-top: 0.4rem;
+}
+
+.bookmarks {
+  display: none;
+  background-color: #5f27cd;
+  list-style: none;
+  position: absolute;
+  top: 10.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.4rem;
+  z-index: 10;
+}
+.bookmarks__item {
+  position: relative;
+  padding: 1rem;
+}
+.bookmarks__link {
+  display: block;
+  padding: 1rem;
+  color: whitesmoke;
+  border-radius: 0.4rem;
+}
+.bookmarks__link:hover {
+  background-color: #8b60e1;
+}
+.bookmarks__remove-icon {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 1rem;
+  cursor: pointer;
+}
+.bookmarks__remove-icon:hover {
+  background-color: #ee5253;
+}
+
+.cta {
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+.cta--blue {
+  background-color: dodgerblue;
+}
+.cta--orange {
+  background-color: orangered;
+}
+.cta--add-bookmark {
+  display: block;
+  margin: 4rem auto;
+  background-color: #5f27cd;
+  padding: 2rem 4rem;
+  border-radius: 100px;
+  font-weight: 900;
+  outline: none;
+}
+
+.close-forms {
+  background: white;
+  position: absolute;
+  top: -1.5rem;
+  right: -1.5rem;
+  width: 3rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+.close-forms:hover {
+  background-color: #ee5253;
+}
+
+.m-right-s {
+  margin-right: 2rem;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-flow: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+@media screen and (max-width: 1090px) {
+  .section-folders-wrapper {
+    max-width: 693px;
+  }
+}
+@media screen and (max-width: 881px) {
+  .section-folders-wrapper {
+    max-width: 445px;
+  }
+}
+.section-forms-wrapper {
+  background-color: #5f27cd;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 807px) {
+  .section-forms-wrapper {
+    display: block;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #5f27cd;
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=style.css.map */

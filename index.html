@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        #close-forms {
+            background: aliceblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<div class="section-added">
+    <h2>ADDED</h2>
+</div>
+
+<button class="cta cta--add-bookmark">ADD BOOKMARK</button>
+<div class="section-folders">
+    <div class="wrapper d-flex flex-wrap section-folders-wrapper"></div>
+</div>
+
+<div class="section-forms d-none">
+    <div class="wrapper d-flex flex-wrap section-forms-wrapper">
+        <img class="close-forms" src="img/icon-close-1.png" alt="close icon">
+
+        <form class="form form--add-url">
+            <div class="form-field">
+                <input type="text" id="url" placeholder="Enter URL:">
+                <div class="error-field">Error</div>
+            </div>
+            <div class="form-field">
+                <select name="folderSelector" id="folderSelector">
+                    <option value="default">Select a folder</option>
+                </select>
+                <div class="error-field">Error</div>
+            </div>
+
+            <input type="submit" class="cta cta--blue" id="addURL" value="Add URL">
+        </form>
+
+        <form class="form form--add-folder">
+            <div class="form-field">
+                <!--url-->
+                <input type="text" id="folderName" placeholder="Enter folder name:">
+                <div class="error-field">Error</div>
+            </div>
+
+            <input type="submit" class="cta cta--orange" id="addFolder" value="Create folder">
+        </form>
+    </div>
+</div>
+
+<script src="./js/main.js" type="module"></script>
+</body>
+</html>
